@@ -1,0 +1,134 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.95]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+\usepackage{fontawesome}
+
+% personal data
+\name{Uday}{Warier}                          % optional, remove / comment the line if not wanted
+         % optional, remove / comment the line if not wanted
+\phone{609-529-3895\hspace{0.15in}\textcolor{gray}\textbullet\hspace{0.15in}\emailsymbol\hspace*{0.15cm}uday.warier1@gmail.com}
+\extrainfo{\hspace*{0.15in}\faLinkedin\hspace*{0.002in} linkedin.com/in/udaywarier\hspace{0.15in}\textcolor{gray}\textbullet\hspace{0.15in}\faGithub\hspace*{0.002in} github.com/udaywarier}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace{-0.65in}
+\large{
+\section{Work Experience}
+
+\vspace{1pt}
+
+\cventry{Summer 2019}{Software Development Intern}{Fiserv, Inc.}{}{}{\vspace{3pt}
+\large{Worked with Apache Spark and Kafka to create a realtime big data streaming application that processes data for 50 million debit card transactions per day. Developed an optimization that improved efficiency of the current application in production by 75\%.}}
+
+\vspace{0.15in}
+
+\cventry{Summer 2018}{Software Development Intern}{DCR Workforce}{}{}{\vspace{3pt}
+\large{Used blockchain technology within the IBM Hyperledger Composer Framework to make the process of conducting background checks on employees more efficient. Created SmartChecker, an application built into DCR's current hiring framework to automatically vet potential candidates before moving them on to the next stage of the hiring process.}}
+
+\section{Education}
+
+\vspace{1pt}
+
+\cventry{Class of 2021}{B.S, Computer Science and Mathematics}{University of Maryland, College Park}{}{\textit{GPA: 3.74/4.00}}{}
+
+\subsection{Honors and Awards} QUEST Honors Program, GSS Lead Mentor, Computer Science Departmental Honors, Dean's List
+
+\subsection{Courses} \textbf{Computer Science:} Object-Oriented Programming, Algorithms, Advanced Data Structures, Discrete Mathematics, Database Design, Computer Vision, Data Science\vspace*{0.10in}
+\newline
+\textbf{Mathematics:} Linear Algebra, Multivariable Calculus, Applied Probability and Statistics, Numerical Analysis
+
+\vspace*{-0.1in}
+\section{Projects}
+
+%\vspace{1pt}
+
+%\textbf{Another project goes here}
+
+%\vspace{1pt}
+
+%project description goes here\newline
+
+%\vspace{1pt}
+
+\large{
+\textbf{Tweet Generator}
+}
+
+\vspace{1pt}
+
+A Twitter bot that analyzes tweet histories of a set of users and uses a Markov-based natural language processing model to generate new tweets from these users. Uses a Node.js wrapper for the Twitter API and Javascript for the implementation of the Markov model.\newline
+
+\vspace{0.05in}
+
+\large{
+\textbf{Virtual Card}
+}
+
+Virtual Card is a peer-to-peer payment service that uses tokenization to conduct transactions that are pre-authorized for a specific time frame. Developed a full-stack web application as a proof of concept using React for the frontend, Express and Node for the backend, and MongoDB for persistent storage. Deployed the application to AWS.\newline
+
+\vspace{0.05in}
+
+\large{
+\textbf{Fantasy Football Drafter}
+}
+
+An application that analyzes past fantasy football data to build a winning team for the upcoming season. Uses Python to scrape data from various different sports statistics websites, and to perform data analytics on the fantasy stats, as well as MATLAB for data visualization. 
+
+
+\section{Skills}
+
+\subsection{Programming Languages} Experienced in: Java, Javascript, Python, SQL, MATLAB. Familiar with: C, Ruby, OCaml, HTML.
+
+\subsection{Other} Git, Apache Spark/Kafka, Jupyter Notebook, Agile/Scrum, AWS, Linux, Postgres
+
+\vspace{1pt}
+}
+
+
+
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
